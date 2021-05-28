@@ -1,0 +1,8 @@
+kadabrait_content.list_content:
+  path: 'list-content/user'
+  defaults:
+    _controller: '\Drupal\kadabrait_content\Controller\ListContentUserController::view'
+    _title: 'List content'
+  requirements:
+    _role: 'administrator'
+    

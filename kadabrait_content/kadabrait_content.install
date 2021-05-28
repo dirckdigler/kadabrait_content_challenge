@@ -1,0 +1,53 @@
+<?php 
+
+/**
+ * hook_schema()
+ */
+function kadabrait_content_schema() {
+  $schema['example_users'] = array(
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'indetification' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'birthdate' => array(
+        'description' => 'created date time(yyyy-mm-dd).',
+        'type' => 'varchar',
+        'mysql_type' => 'DATETIME',
+        'not null' => TRUE,
+      ),
+      'position' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'status' => array(
+        'description' => 'status(1=admin,0=others).',
+        'type' => 'int',
+        'length' => 1,
+        'not null' => TRUE,
+        'default' => 1,
+      ),
+    ),
+    'primary key' => array(
+      'id',
+    ),
+  );
+
+  return $schema;
+
+}

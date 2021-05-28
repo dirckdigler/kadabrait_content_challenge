@@ -1,0 +1,20 @@
+{#
+  /**
+    * @file
+    * Default theme implementation for an item list.
+    *
+    * Available variables:
+    *
+    * @see template_preprocess_template_directory()
+    *
+    * @ingroup themeable
+    */
+  #}
+  <section class="list-content">
+    <h2>{{ '10 latest contents'|t }}</h2>
+    <ul>
+      {% for item in content %}
+          <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </section>

@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains kadabrait_content.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_help().
+ */
+function kadabrait_content_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kadabrait_content module.
+    case 'help.page.kadabrait_content':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Form Chalenge') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function kadabrait_content_theme($existing, $type, $theme, $path) {
+  return [
+    'kadabrait_content' => [
+      'variables' => [
+        'content' => NULL,
+      ]
+    ],
+  ];
+}

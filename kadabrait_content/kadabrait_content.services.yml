@@ -1,0 +1,3 @@
+services:
+  kadabrait_content.list_content:
+    class: Drupal\kadabrait_content\Service\KadabraItContent
